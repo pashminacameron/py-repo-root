@@ -13,7 +13,7 @@ Our version fixes some of the issues in the original.
 
 Installation:
 ```
-pip install project-root
+pip install py-repo-root
 ```
 
 ## Usage

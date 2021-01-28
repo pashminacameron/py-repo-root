@@ -1,6 +1,6 @@
 # Introduction 
 
-his package standardizes the handling of paths in a Python project by 
+This package standardizes the handling of paths in a Python project by 
 allowing all paths to be relative to the project repo root. 
 The package also helps discover the project root automatically 
 based on the location of the file that invokes it and a user-specified

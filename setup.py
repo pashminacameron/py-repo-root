@@ -4,7 +4,7 @@ with open('README.md') as f:
     long_description = f.read()
 
 setuptools.setup(
-      name='project-root',
+      name='py-repo-root',
       version='0.1.0',
       license='MIT',
       description='Python utility for cleaner handling of paths',
@@ -14,6 +14,8 @@ setuptools.setup(
       packages=setuptools.find_packages(),
       python_requires=">=3.7.0",
       include_package_data=True,
+      author='Pashmina Cameron, Henry Jackson Flux',
+      author_email = "pashabhi@yahoo.com",
       install_requires=[
           'pathlib', 'typing-extensions'
       ],

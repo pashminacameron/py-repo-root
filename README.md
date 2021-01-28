@@ -20,7 +20,7 @@ pip install py-repo-root
 
 Get project root
 ```
-from projectroot import project_root
+from pyreporoot import project_root
 project_root_dir = project_root(Path(__file__), root_files='requirements.txt')
 ```
 
@@ -29,7 +29,7 @@ of running some scripts.
 
 ```
 import sys
-from projectroot import project_root
+from pyreporoot import project_root
 sys,path.insert(0, str(project_root(Path(__file__), root_files='requirements.txt')))
 ```
 Getting a relative path from the project root for a file:

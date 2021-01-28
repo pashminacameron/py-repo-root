@@ -7,7 +7,8 @@ based on the location of the file that invokes it and a user-specified
  (or commonly used) project root indicator files such as `requirements.txt`. 
  
 This package was heavily inspired by [pyprojroot](https://github.com/chendaniely/pyprojroot). 
-Our version fixes some of the issues in the original. 
+Our version allows custom root file indicators, avoids recursive "/" is parent of "/" issue and can use 
+the current file location to start walking the directory tree.
 
 ## Usage
 
@@ -20,7 +21,9 @@ pip install py-repo-root
 
 Get project root
 ```
+from pathlib import Path
 from pyreporoot import project_root
+
 project_root_dir = project_root(Path(__file__), root_files='requirements.txt')
 ```
 
@@ -29,13 +32,17 @@ of running some scripts.
 
 ```
 import sys
+from pathlib import Path
 from pyreporoot import project_root
-sys,path.insert(0, str(project_root(Path(__file__), root_files='requirements.txt')))
+
+sys.path.insert(0, str(project_root(Path(__file__), root_files='requirements.txt')))
 ```
 Getting a relative path from the project root for a file:
 
 ```
+from pathlib import Path
 from projectroot import project_root
+
 path_to_file_from_project_root = project_root(Path(__file__), root_files='requirements.txt').joinpath('/path/to/file.txt')
 ```
 

@@ -5,12 +5,12 @@ with open('README.md') as f:
 
 setuptools.setup(
       name='py-repo-root',
-      version='0.4.0',
+      version='0.5.0',
       license='MIT',
       description='Python utility for cleaner handling of paths',
       long_description=long_description,
       long_description_content_type='text/markdown',
-      url='https://github.com/microsoft/project-root',
+      url='https://github.com/pashminacameron/py-repo-root',
       packages=setuptools.find_packages(),
       python_requires=">=3.7.0",
       include_package_data=True,

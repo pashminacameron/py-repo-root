@@ -46,6 +46,8 @@ def project_root(
         file_path = Path(file_path)
     if isinstance(root_files, str):
         root_files = (root_files,)
+    # Get absolute path to avoid . is parent of . issue
+    file_path = file_path.resolve()
     project_path = py_project_root(path=file_path, project_files=root_files)
     if project_path.exists():
         return project_path

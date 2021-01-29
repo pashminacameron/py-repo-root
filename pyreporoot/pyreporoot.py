@@ -3,16 +3,16 @@ This file is heavily based on https://github.com/chendaniely/pyprojroot (MIT lic
 but includes some additional fixes:
 
     1. "/" being parent of "/", leading to recursion error
-	2. current working directory being used instead of invoking file path
-	3. a custom root_files filter
+    2. current working directory being used instead of invoking file path
+    3. a custom root_files filter
 
 """
 
 from pathlib import Path
-from typing import Tuple, Union, Optional
+from typing import Union, Iterable
 
 
-def py_project_root(path: Path, project_files: Tuple) -> Path:
+def py_project_root(path: Path, project_files: Iterable) -> Path:
     """
     Recursively searches for project files in the current working directory
     to find the project root of the python project.
@@ -32,7 +32,7 @@ def py_project_root(path: Path, project_files: Tuple) -> Path:
 
 def project_root(
     file_path: Union[Path, str],
-    root_files: Optional[Union[str, Tuple[str]]] = [
+    root_files: Union[str, Iterable[str]] = (
         ".git",
         ".here",
         "requirements.txt",
@@ -40,7 +40,7 @@ def project_root(
         ".flake8",
         "setup.py",
         "pyproject.toml",
-    ],
+    ),
 ):
     if isinstance(file_path, str):
         file_path = Path(file_path)

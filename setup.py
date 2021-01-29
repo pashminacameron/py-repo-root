@@ -5,7 +5,7 @@ with open('README.md') as f:
 
 setuptools.setup(
       name='py-repo-root',
-      version='1.1.0',
+      version='1.2.0',
       license='MIT',
       description='Python utility for cleaner handling of paths',
       long_description=long_description,

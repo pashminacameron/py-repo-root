@@ -33,6 +33,7 @@ def py_project_root(path: Path, project_files: Iterable) -> Path:
 def project_root(
     file_path: Union[Path, str],
     root_files: Union[str, Iterable[str]] = (
+        ".py-repo-root",
         ".git",
         ".here",
         "requirements.txt",

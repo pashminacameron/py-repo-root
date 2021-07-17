@@ -1,0 +1,6 @@
+pyreporoot/__pycache__/
+.idea
+.vscode
+build/
+dist/
+py_repo_root.egg-info/

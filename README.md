@@ -46,11 +46,8 @@ Getting a relative path from the project root for a file:
 
 ```
 from pathlib import Path
-from projectroot import project_root
+from pyreporoot import project_root
 
 project_root_dir = project_root(__file__)
 path_rel_to_project_root = Path(project_root_dir).joinpath('/path/to/file.txt')
 ```
-
-
-
